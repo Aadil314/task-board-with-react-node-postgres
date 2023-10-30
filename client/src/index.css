@@ -16,7 +16,7 @@ code {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  background-color: antiquewhite;
+  background: linear-gradient(to right, antiquewhite, rgb(231, 212, 188), antiquewhite);
   align-items: center;
   font-size: 15px;
   color: rgb(92, 57, 12);
@@ -104,7 +104,7 @@ code {
 }
 
 .create-list{
-  background-color: antiquewhite;
+  background: linear-gradient(to bottom right, rgb(231, 212, 188), antiquewhite, rgb(231, 212, 188));
   border: 1px solid rgb(151, 100, 33);
   height: 150px;
   padding: 10px;
