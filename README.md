@@ -1,5 +1,5 @@
 # task-board-with-react-node-postgres
-This app was created Using react node and postgres. It's also dockerised.
+This is a dockerised application, created using react node and postgres.
 
 ## Installation:
 - Need docker installed. (currently tested in linux OS).
