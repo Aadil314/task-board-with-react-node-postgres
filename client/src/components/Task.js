@@ -73,7 +73,7 @@ const Task = ({ task,displayTasks }) => {
             defaultValue={task.description}
             onChange={(e) => handleDescriptionUpdate(e.target.value)}
         />
-        <button type="button" onClick={handleDeleteTask}>X</button>
+        <button className='delete-btn' type="button" onClick={handleDeleteTask}>X</button>
     </div>
   );
 };

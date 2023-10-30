@@ -45,6 +45,12 @@ code {
   width: 100%;
 }
 
+.delete-btn{
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
 .login-page-container{
   height: 500px;
   background-color: rgb(255, 250, 244);
@@ -151,6 +157,89 @@ code {
   margin: 20px;
   border-radius: 7px;
   flex: 0 0 250px;
-  background-color: antiquewhite;
+  background: linear-gradient(to bottom right, rgb(231, 212, 188), antiquewhite, rgb(231, 212, 188));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.list-heading-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-heading{
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.tasks-container{
+  flex-grow: 1;
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(102, 64, 14) none;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: none;
+    border: none;
+    border-radius: 7px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgb(102, 64, 14);
+    border-radius: 7px;
+  }
+}
+
+.task-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: linear-gradient(to right, rgb(231, 212, 188), rgb(241, 223, 200), rgb(231, 212, 188));;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.check-box {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  width: 20px;
+  height: 20px;
+
+  border: 2px solid rgb(75, 44, 4);
+  border-radius: 4px;
+
+  &:checked {
+    background-color: rgb(75, 44, 4);
+    border-color: rgb(75, 44, 4);
+  }
+
+  &:checked::before {
+    content: "✔";
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: white;
+  }
+}
+
+.task {
+  background: none;
+  border: none;
+  border-radius: 5px;
+}

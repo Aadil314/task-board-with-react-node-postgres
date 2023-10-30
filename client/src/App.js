@@ -37,7 +37,7 @@ function App() {
   return (
     <div className="container">
       {user ? (
-        <Header title={`Welcome ${user}`} logOut={logOut} />
+        <Header title={`Welcome ${user.username}`} logOut={logOut} />
         ) : (
         <Header title="Welcome to Task Board! Please log in to continue." />
       )}
