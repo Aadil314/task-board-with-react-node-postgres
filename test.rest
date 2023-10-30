@@ -1,0 +1,58 @@
+###
+GET http://localhost:5000
+
+###
+POST http://localhost:5000/users/login
+Content-Type: application/json
+
+{
+    "username": "aadil",
+    "password": "123"
+}
+
+###
+POST http://0.0.0.0:5000/lists
+Content-Type: application/json
+
+{
+    "title": "List1",
+    "UserId": 1
+}
+
+###
+GET http://0.0.0.0:5000/lists/1
+Content-Type: application/json
+
+{
+    "UserId": 1
+}
+
+###
+POST http://0.0.0.0:5000/tasks/1
+Content-Type: application/json
+
+{
+    "description": "blah blah blabber"
+}
+
+###
+PUT http://0.0.0.0:5000/tasks/9
+Content-Type: application/json
+
+{
+    "description": "testing change"
+}
+
+###
+PUT http://0.0.0.0:5000/lists/8
+Content-Type: application/json
+
+{
+    "title": "To Do"
+}
+
+###
+DELETE http://0.0.0.0:5000/lists/11
+
+###
+DELETE http://0.0.0.0:5000/tasks/77

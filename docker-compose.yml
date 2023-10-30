@@ -1,0 +1,30 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    command: /bin/sh -c "npm run dev && npx sequelize db:migrate"
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client:/app/client
+    depends_on:
+      - web
+      
+  db:
+    image: postgres
+    environment:
+      POSTGRES_DB: mydb
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+    ports:
+      - "5432:5432"
